@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+.homePage {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Raleway', sans-serif;
+  color: rgb(49, 49, 179);
+}
+
+@media (max-width: 1500px) {
+  .homePage {
+    max-width: 1100px;
+  }
+}
+
+.header {
+  font-size: 40px;
+  color: rgb(49, 49, 179);
+  border: 4px solid rgb(49, 49, 179);
+  border-radius: 50px;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  background-color: rgb(49, 49, 179);
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.navigation a:hover {
+  background-color: rgb(249, 11, 126);
+}
+
+.profileOverview,
+.notifications,
+.schedulingInfo {
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 4px solid rgb(49, 49, 179);
+  border-radius: 50px;
+}
+
+.footer {
+  color: rgb(49, 49, 179);
+  margin-top: 20px;
+}
+
+.customButtonBig {
+  background-color: rgb(49, 49, 179);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.customButtonBig:hover {
+  background-color: rgb(249, 11, 126);
+}
