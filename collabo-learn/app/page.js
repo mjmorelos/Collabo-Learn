@@ -3,16 +3,28 @@ import React from 'react';
 // Navbar component
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center py-4 px-6 shadow-md bg-white text-black font-anonymous">
+    <nav className="fixed top-0 w-full flex justify-between items-center py-4 px-6 shadow-md bg-white text-black font-anonymous">
       <div className="text-xl font-semibold text-black">
         <img src="https://i.postimg.cc/FRnsYr8k/collabo-logo.png" alt="Collabo-Learn Logo" />
       </div>
-      <div className="space-x-8"> {/* Increase the space between the links */}
-        <a href="#home" className="hover:underline text-black">Home</a>
-        <a href="#collaborate" className="hover:underline text-black">Collaborate</a>
-        <a href="#find-tutor" className="hover:underline text-black">Find a tutor</a>
-        <a href="#sample-projects" className="hover:underline text-black">Sample Projects</a>
+      <div className="space-x-4">
+        <button className="border border-blue-500 px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300 transition duration-300 ease-in-out">
+          <a href="#home" className="hover:underline">Home</a>
+        </button>
+
+        <button className="border border-blue-500 px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300 transition duration-300 ease-in-out">
+          <a href="#collaborate" className="hover:underline">Collaborate</a>
+        </button>
+
+        <button className="border border-blue-500 px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300 transition duration-300 ease-in-out">
+          <a href="#find-tutor" className="hover:underline">Find a tutor</a>
+        </button>
+
+        <button className="border border-blue-500 px-4 py-2 rounded-md hover:bg-blue-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300 transition duration-300 ease-in-out">
+          <a href="#sample-projects" className="hover:underline">Sample Projects</a>
+        </button>
       </div>
+
     </nav>
   );
 };
@@ -52,6 +64,7 @@ const Footer = () => {
     <footer className="fixed bottom-0 left-0 right-0 flex justify-between items-center p-4" style={{ backgroundColor: 'gray' }}>
       <div className="flex space-x-4">
         {/* Placeholder for social icons */}
+        <a href="#Social" className="hover:underline text-white">Social</a>
         <a href="#" className="text-white">
           <img src="https://i.postimg.cc/W3Ch1B9n/facebook.png" alt="Facebook" className="h-6 w-6" />
         </a>
@@ -64,25 +77,17 @@ const Footer = () => {
         <a href="#" className="text-white">
           <img src="https://i.postimg.cc/LX1mNnTt/youtube.png" alt="Youtube" className="h-6 w-6" />
         </a>
-        
       </div>
 
-      <div className="space-x-4">
-        <a href="#Social" className="hover:underline text-white">Social</a>
-      </div>
-
-      <div className="space-x-4">
-        <a href="#general" className="hover:underline text-white">General</a>
-        <a href="#Home" className="hover:underline text-white">Home</a>
-        <a href="#collaborate" className="hover:underline text-white">Collaborate</a>
-        <a href="#find-tutor" className="hover:underline text-white">Find a tutor</a>
-        <a href="#Sample-Projects" className="hover:underline text-white">Sample Projects</a>
-      </div>
 
       <div className="space-x-4">
         <a href="#careers" className="hover:underline text-white">Careers</a>
-        <a href="#Apply" className="hover:underline text-white">Apply</a>
-        <a href="#Search" className="hover:underline text-white">Search</a>
+        
+          <a href="#Apply" className="hover:underline text-white">Apply</a>
+       
+       
+          <a href="#Search" className="hover:underline text-white">Search</a>
+        
       </div>
       <div className="text-sm text-white">
         Copyright © 2023 Collabo-Learn Inc. All Rights Reserved
@@ -97,7 +102,37 @@ const App = () => {
     <div className="App" style={{ backgroundColor: 'white' }}>
       <Navbar />
       <Hero />
-      <div className="my-8">
+      <div className="my-8 text-black">
+        <Section
+          title="Web Development"
+          description="Web development is a fascinating field that involves creating websites or web applications for the internet."
+        />
+        <Section
+          title="UX/UI"
+          description="User Experience and User Interface"
+        />
+      </div>
+      <div className="my-8 text-black">
+        <Section
+          title="Web Development"
+          description="Web development is a fascinating field that involves creating websites or web applications for the internet."
+        />
+        <Section
+          title="UX/UI"
+          description="User Experience and User Interface"
+        />
+      </div>
+      <div className="my-8 text-black">
+        <Section
+          title="Web Development"
+          description="Web development is a fascinating field that involves creating websites or web applications for the internet."
+        />
+        <Section
+          title="UX/UI"
+          description="User Experience and User Interface"
+        />
+      </div>
+      <div className="my-8 text-black">
         <Section
           title="Web Development"
           description="Web development is a fascinating field that involves creating websites or web applications for the internet."
