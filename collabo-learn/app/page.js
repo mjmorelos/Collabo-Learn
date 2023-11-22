@@ -3,35 +3,34 @@ import React from 'react';
 // Navbar component
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center py-4 px-6 shadow-md bg-white text-black font-anonymous">
-      <div className="text-xl font-semibold text-black">Collabo-Learn</div>
-      <div className="space-x-4">
-        <a href="#home" className="hover:underline text=black">Home</a>
-        <a href="#collaborate" className="hover:underline text=black">Collaborate</a>
-        <a href="#find-tutor" className="hover:underline text=black">Find a tutor</a>
-        <a href="#sample-projects" className="hover:underline text=black">Sample Projects</a>
-      </div>
-    </nav>
+     <nav className="flex justify-between items-center py-4 px-6 shadow-md bg-white text-black font-anonymous">
+       <div className="text-xl font-semibold text-black">
+         <img src="https://i.postimg.cc/FRnsYr8k/collabo-logo.png" alt="Collabo-Learn Logo" />
+       </div>
+       <div className="space-x-4">
+         <a href="#home" className="hover:underline text=black">Home</a>
+         <a href="#collaborate" className="hover:underline text=black">Collaborate</a>
+         <a href="#find-tutor" className="hover:underline text=black">Find a tutor</a>
+         <a href="#sample-projects" className="hover:underline text=black">Sample Projects</a>
+       </div>
+     </nav>
   );
-};
-
+ };
 // Hero component for the main banner with text and image side by side
+
 const Hero = () => {
   return (
-    <div className="flex justify-between items-center bg-blue-200 px-6" style={{ height: '263px' }}>
-      <img 
-        src="https://techpando.com/wp-content/uploads/2022/09/Uses-of-Laptop-in-Our-Daily-Life.jpg"
-        alt="Collaborative workspace"
-        className="mr-20 w-auto" // Added right margin of 1rem (mr-4)
-        style={{ width: '552px', height: '263px' }} // Inline styles for exact sizing
-      />
-      <div className="flex-1">
-        <h1 className="text-3xl font-bold">Collaborate and Learn.</h1>
-        <p className="mt-4 text-lg">A place to share knowledge and better understand the world.</p>
-      </div>
-    </div>
+     <div style={{ width: '100%', height: '300px', overflow: 'hidden' }}>
+       <img
+         src="https://i.postimg.cc/fyt2NCYS/cover-page.png"
+         alt="Collaborative workspace"
+         className="mr-20 w-auto"
+         style={{ width: '100%', height: '100%' }}
+       />
+     </div>
   );
-};
+ };
+
 
 // Section component for Web Development and UX/UI sections
 const Section = ({ title, description }) => {
@@ -51,7 +50,7 @@ const Section = ({ title, description }) => {
 // Footer component
 const Footer = () => {
   return (
-    <footer className="flex justify-between items-center p-4 bg-gray-200 text-black">
+    <footer className="flex justify-between items-center p-4 bg-gray-20">
       <div className="flex space-x-4">
         {/* Placeholder for social icons */}
       </div>
