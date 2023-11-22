@@ -20,8 +20,7 @@ const Navbar = () => {
           className={`border border-teal-500 px-4 py-2 rounded-md hover:bg-teal-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300 transition duration-300 ease-in-out ${
             isCollaborateDropdownOpen ? 'bg-teal-500 text-white' : ''
           }`}
-          onClick={handleCollaborateClick}
-        >
+          onClick={handleCollaborateClick}>
           Collaborate
         </button>
 
