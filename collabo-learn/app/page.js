@@ -52,26 +52,37 @@ const Footer = () => {
     <footer className="fixed bottom-0 left-0 right-0 flex justify-between items-center p-4" style={{ backgroundColor: 'gray' }}>
       <div className="flex space-x-4">
         {/* Placeholder for social icons */}
+        <a href="#" className="text-white">
+          <img src="https://i.postimg.cc/W3Ch1B9n/facebook.png" alt="Facebook" className="h-6 w-6" />
+        </a>
+        <a href="#" className="text-white">
+          <img src="https://i.postimg.cc/Y95CH19D/instagram.png" alt="Instagram" className="h-6 w-6" />
+        </a>
+        <a href="#" className="text-white">
+          <img src="https://i.postimg.cc/3wW80L0b/linkedin.png" alt="LinkedIn" className="h-6 w-6" />
+        </a>
+        <a href="#" className="text-white">
+          <img src="https://i.postimg.cc/LX1mNnTt/youtube.png" alt="Youtube" className="h-6 w-6" />
+        </a>
+        
       </div>
 
       <div className="space-x-4">
-      <a href="#Social" className="hover:underline text-white">Social</a>
-
+        <a href="#Social" className="hover:underline text-white">Social</a>
       </div>
+
       <div className="space-x-4">
         <a href="#general" className="hover:underline text-white">General</a>
         <a href="#Home" className="hover:underline text-white">Home</a>
         <a href="#collaborate" className="hover:underline text-white">Collaborate</a>
         <a href="#find-tutor" className="hover:underline text-white">Find a tutor</a>
         <a href="#Sample-Projects" className="hover:underline text-white">Sample Projects</a>
-
-
       </div>
 
       <div className="space-x-4">
-      <a href="#careers" className="hover:underline text-white">Careers</a>
-      <a href="#Apply" className="hover:underline text-white">Apply</a>
-      <a href="#Search" className="hover:underline text-white">Search</a>
+        <a href="#careers" className="hover:underline text-white">Careers</a>
+        <a href="#Apply" className="hover:underline text-white">Apply</a>
+        <a href="#Search" className="hover:underline text-white">Search</a>
       </div>
       <div className="text-sm text-white">
         Copyright © 2023 Collabo-Learn Inc. All Rights Reserved
