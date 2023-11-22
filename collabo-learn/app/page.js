@@ -3,7 +3,7 @@ import React from 'react';
 // Navbar component
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center py-4 px-6 shadow-md bg-white text-black font-anonymous">
+    <nav className="fixed top-0 w-full flex justify-between items-center py-4 px-6 shadow-md bg-white text-black font-anonymous">
       <div className="text-xl font-semibold text-black">Collabo-Learn</div>
       <div className="space-x-4">
         <a href="#home" className="hover:underline text=black">Home</a>
@@ -68,7 +68,7 @@ const Footer = () => {
 // Main App component that composes the page
 const App = () => {
   return (
-    <div className="App bg-white">
+    <div className="App bg-white min-h-screen">
       <Navbar />
       <Hero />
       <div className="my-8">
@@ -85,5 +85,6 @@ const App = () => {
     </div>
   );
 };
+
 
 export default App;
