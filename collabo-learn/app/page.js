@@ -1,70 +1,22 @@
 "use client";
+
 import React from 'react';
-import { useState } from 'react';
-
-// Navbar component
-const Navbar = () => {
-  const [isCollaborateDropdownOpen, setCollaborateDropdownOpen] = useState(false);
-
-  const handleCollaborateClick = () => {
-    setCollaborateDropdownOpen(!isCollaborateDropdownOpen);
-  };
-
-  return (
-    <nav className="fixed top-0 w-full flex justify-between items-center py-4 px-6 shadow-md bg-white text-black font-anonymous">
-      <div className="text-xl font-semibold text-black">
-        <img src="https://i.postimg.cc/FRnsYr8k/collabo-logo.png" alt="Collabo-Learn Logo" />
-      </div>
-      <div className="space-x-4 relative inline-block">
-      <button
-          className={`border border-teal-500 px-4 py-2 rounded-md hover:bg-teal-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300 transition duration-300 ease-in-out ${
-            isCollaborateDropdownOpen ? 'bg-teal-500 text-white' : ''
-          }`}
-          onClick={handleCollaborateClick}>
-          Collaborate
-        </button>
-
-        {isCollaborateDropdownOpen && (
-          <div className="absolute top-full left-0 bg-white border border-teal-500 p-3 rounded-md space-y-2">
-            <a href="#collaborate-option1" className="hover:underline block">Web</a>
-            <a href="#collaborate-option2" className="hover:underline block">UI/UX</a>
-            <a href="#collaborate-option3" className="hover:underline block">Database</a>
-            <a href="#collaborate-option4" className="hover:underline block">Language Specific</a>
-            <a href="#collaborate-option5" className="hover:underline block">Networking</a>
-            <a href="#collaborate-option6" className="hover:underline block">Mobile</a>
-          </div>
-        )}
-        <button className="border border-teal-500 px-4 py-2 rounded-md hover:bg-teal-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300 transition duration-300 ease-in-out">
-          <a href="#home" className="hover:underline">Home</a>
-        </button>
-
-        <button className="border border-teal-500 px-4 py-2 rounded-md hover:bg-teal-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300 transition duration-300 ease-in-out">
-          <a href="#find-tutor" className="hover:underline">Find a tutor</a>
-        </button>
-
-        <button className="border border-teal-500 px-4 py-2 rounded-md hover:bg-teal-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300 transition duration-300 ease-in-out">
-          <a href="#sample-projects" className="hover:underline">Sample Projects</a>
-        </button>
-      </div>
-    </nav>
-  );
-};
-
+import Footer from './components/footer';
+import Navbar from './components/navbar';
 
 // Hero component for the main banner with text and image side by side
 const Hero = () => {
   return (
-    <div style={{ width: '100%', height: '300px', overflow: 'hidden' }}>
+    <div style={{ width: '100%', height: '450px', overflow: 'hidden', backgroundColor: '#99C2CF'}}>
       <img
         src="https://i.postimg.cc/fyt2NCYS/cover-page.png"
         alt="Collaborative workspace"
         className="mr-20 w-auto"
-        style={{ width: '100%', height: '100%' }}
+        style={{ width: '79%', height: '100%' }}
       />
     </div>
   );
 };
-
 // Section component for Web Development and UX/UI sections
 const Section = ({ title, description }) => {
   return (
@@ -79,47 +31,8 @@ const Section = ({ title, description }) => {
     </div>
   );
 };
-
-// Footer component
-const Footer = () => {
-  return (
-    <footer className="fixed bottom-0 left-0 right-0 flex justify-between items-center p-4" style={{ backgroundColor: 'gray' }}>
-      <div className="flex space-x-4">
-        {/* Placeholder for social icons */}
-        <a href="#Social" className="hover:underline text-white">Social</a>
-        <a href="#" className="text-white">
-          <img src="https://i.postimg.cc/W3Ch1B9n/facebook.png" alt="Facebook" className="h-6 w-6" />
-        </a>
-        <a href="#" className="text-white">
-          <img src="https://i.postimg.cc/Y95CH19D/instagram.png" alt="Instagram" className="h-6 w-6" />
-        </a>
-        <a href="#" className="text-white">
-          <img src="https://i.postimg.cc/3wW80L0b/linkedin.png" alt="LinkedIn" className="h-6 w-6" />
-        </a>
-        <a href="#" className="text-white">
-          <img src="https://i.postimg.cc/LX1mNnTt/youtube.png" alt="Youtube" className="h-6 w-6" />
-        </a>
-      </div>
-
-
-      <div className="space-x-4">
-        <a href="#careers" className="hover:underline text-white">Careers:</a>
-        
-          <a href="#Apply" className="hover:underline text-white">Apply</a>
-       
-       
-          <a href="#Search" className="hover:underline text-white">Search</a>
-        
-      </div>
-      <div className="text-sm text-white">
-        Copyright © 2023 Collabo-Learn Inc. All Rights Reserved
-      </div>
-    </footer>
-  );
-};
-
 // Main App component that composes the page
-const App = () => {
+export default function App() {
   return (
     <div className="App" style={{ backgroundColor: 'white' }}>
       <br /><br /><br /><br /><br />
@@ -170,4 +83,3 @@ const App = () => {
   );
 };
 
-export default App;
