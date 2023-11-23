@@ -103,7 +103,7 @@ const Footer = () => {
 
 
       <div className="space-x-4">
-        <a href="#careers" className="hover:underline text-white">Careers</a>
+        <a href="#careers" className="hover:underline text-white">Careers:</a>
         
           <a href="#Apply" className="hover:underline text-white">Apply</a>
        
