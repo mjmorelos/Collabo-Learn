@@ -20,7 +20,7 @@ export default function Footer() {
     }, []);
   
     return (
-      <div style={{ minHeight: '60vh', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ minHeight: '30vh', display: 'flex', flexDirection: 'column' }}>
         <main style={{ flex: '1 0 auto' }}>
         {/* Your main content goes here */}
         </main>
