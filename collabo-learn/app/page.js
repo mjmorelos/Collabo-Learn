@@ -49,36 +49,6 @@ export default function App() {
           description="User Experience and User Interface"
         />
       </div>
-      <div className="my-8 text-black">
-        <Section
-          title="Web Development"
-          description="Web development is a fascinating field that involves creating websites or web applications for the internet."
-        />
-        <Section
-          title="UX/UI"
-          description="User Experience and User Interface"
-        />
-      </div>
-      <div className="my-8 text-black">
-        <Section
-          title="Web Development"
-          description="Web development is a fascinating field that involves creating websites or web applications for the internet."
-        />
-        <Section
-          title="UX/UI"
-          description="User Experience and User Interface"
-        />
-      </div>
-      <div className="my-8 text-black">
-        <Section
-          title="Web Development"
-          description="Web development is a fascinating field that involves creating websites or web applications for the internet."
-        />
-        <Section
-          title="UX/UI"
-          description="User Experience and User Interface"
-        />
-      </div>
       <Footer />
     </div>
   );
