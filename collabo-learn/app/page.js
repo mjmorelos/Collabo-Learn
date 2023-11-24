@@ -1,20 +1,21 @@
 "use client";
 
 import React from 'react';
-import Footer from './components/footer';
 import Navbar from './components/navbar';
+import Footer from './components/footer';
 
-// Hero component for the main banner with text and image side by side
-const Hero = () => {
+// main banner with text and image side by side
+const Banner = () => {
   return (
-    <div style={{ width: '100%', height: '450px', overflow: 'hidden', backgroundColor: '#99C2CF'}}>
+    <div style={{ display: 'flex', alignItems: 'center', width: '100%', height: '450px', overflow: 'hidden', backgroundColor: '#99C2CF'}}>
+
       <img
-        src="https://i.postimg.cc/fyt2NCYS/cover-page.png"
+        src="/resources/student.jpg"
         alt="Collaborative workspace"
         className="mr-20 w-auto"
-        style={{ width: '100vw', height: '100%' }}
-      />
- 
+        style={{ width: '40%', height: '95%' }}
+      /> 
+      <h1 style={{fontFamily: 'anonymous pro', color: '#4D4D4D', fontSize: '2rem'}}>Collaborate and Learn.</h1>
     </div>
   );
 };
@@ -38,7 +39,7 @@ export default function App() {
     <div className="App" style={{ backgroundColor: 'white' }}>
       <br /><br /><br /><br /><br />
       <Navbar />
-      <Hero />
+      <Banner />
       <div className="my-8 text-black">
         <Section
           title="Web Development"
