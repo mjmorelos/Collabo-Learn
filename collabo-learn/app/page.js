@@ -12,8 +12,9 @@ const Hero = () => {
         src="https://i.postimg.cc/fyt2NCYS/cover-page.png"
         alt="Collaborative workspace"
         className="mr-20 w-auto"
-        style={{ width: '79%', height: '100%' }}
+        style={{ width: '100vw', height: '100%' }}
       />
+ 
     </div>
   );
 };
@@ -31,7 +32,7 @@ const Section = ({ title, description }) => {
     </div>
   );
 };
-// Main App component that composes the page
+
 export default function App() {
   return (
     <div className="App" style={{ backgroundColor: 'white' }}>

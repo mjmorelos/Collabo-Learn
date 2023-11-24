@@ -2,24 +2,32 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
 export default function Footer() {
+
     const [showFooter, setShowFooter] = useState(false);
   
     useEffect(() => {
       const handleScroll = () => {
-        if (window.scrollY > 100) {
+        const windowHeight = window.innerHeight;
+        const fullHeight = document.body.clientHeight;
+        const scrolled = window.scrollY;
+
+        if (windowHeight + scrolled >= fullHeight) {
           setShowFooter(true);
         } else {
           setShowFooter(false);
         }
       };
-  
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
     }, []);
   
     return (
-      <footer className={`fixed bottom-0 left-0 right-0 flex justify-between items-center p-7 ${showFooter ? 'block' : 'hidden'}`} style={{ backgroundColor: "#022434"}}>
-        <div className="flex space-x-4">
+      <footer className="flex flex-col items-center justify-center text-center py-3 bg-gray-800">
+        <div className="space-x-4 mt-5 mb-4">
+          <Link href="./About" className="hover:underline text-white">
+            About Us</Link>
+          <a href="#careers" className="hover:underline text-white">Careers</a>
+          <a href="#careers" className="hover:underline text-white">Support</a>
+        </div>
+        <div className="flex space-x-4 mb-4">
           {/* Placeholder for social icons */}
           <a href="#Social" className="hover:underline text-white">Socials</a>
           <a href="#" className="text-white">
@@ -35,17 +43,8 @@ export default function Footer() {
             <img src="https://i.postimg.cc/LX1mNnTt/youtube.png" alt="Youtube" className="h-6 w-6" />
           </a>
         </div>
-        <div className="space-x-4">
-          <a href="#careers" className="hover:underline text-white">Careers</a>
-          
-            <a href="#Apply" className="hover:underline text-white">Apply</a>
-         
-         
-            <Link href="./About" className="hover:underline text-white">About</Link>
-          
-        </div>
         <div className="text-sm text-white">
-          Copyright © 2023 Collabo-Learn All Rights Reserved
+          Copyright © 2023 Collabo-Learn<br/> All rights reserved.
         </div>
       </footer>
     );

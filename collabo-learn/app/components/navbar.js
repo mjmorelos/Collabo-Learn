@@ -11,11 +11,13 @@ export default function Navbar() {
     useEffect(() => {
       const handleScroll = () => {
         const currentScrollPos = window.pageYOffset;
-        const isScrolledDown = prevScrollPos < currentScrollPos && currentScrollPos > 100;
+        const isScrolledDown = currentScrollPos > 100;
   
-        setVisible(!isScrolledDown);
+        setVisible(!isScrolledDown || currentScrollPos === 0);
         setPrevScrollPos(currentScrollPos);
       };
+
+      handleScroll();
   
       window.addEventListener('scroll', handleScroll);
       return () => {
