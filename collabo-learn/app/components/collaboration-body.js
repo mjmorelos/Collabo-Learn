@@ -1,60 +1,74 @@
-import React from "react";
-import Link from "next/link";
-
-export default function Collaboration() {
-    const mediaScrollerStyle = {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        overflowX: 'auto',
-        gap: '2rem',
-        padding: '4rem 0',
-
-      };
-      
-      const mediaScrollerItemStyle = {
-        flex: 'auto',
-        maxWidth: '100%',
-        maxHeight: '100%',
-        borderRadius: '8px',
-        overflowX: 'hidden'
-      };
+    import React from "react";
+    import Link from "next/link";
     
-      const mediaScrollerItemImgStyle = {
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover'
-      };
+    export default function Collaboration() {
+        const mediaItems = [
+            {href: "/Collaborate/web", src: "/resources/web.jpg", alt: "Web"},
+            {href: "/Collaborate/uxi", src: "/resources/uxui.jpg", alt: "UI/UX"},
+            {href: "/Collaborate/mobile", src: "/resources/mobile.jpg", alt: "Mobile"},
+            {href: "/Collaborate/ai", src: "/resources/machine-learning.jpg", alt: "AI"},
+            {href: "/Collaborate/database", src: "/resources/database.jpg", alt: "Database"},
+            {href: "/Collaborate/language", src: "/resources/language.jpg", alt: "OOP"},
+            {href: "/Collaborate/network", src: "/resources/networking.jpg", alt: "Networking"},
+
+            {href: "/Collaborate/iot", src: "/resources/IoT.jpg", alt: "IoT"},
+
+        ];
     
-    return (
-        <div style={{ 
-            marginTop: '1rem', 
-            color: '#4D4D4D', 
-            fontSize: '23px', 
-            fontFamily: 'Anonymous Pro', 
-            lineHeight: '3', 
-            textAlign: 'center' }}>
+        const enlarge = (e) => {
+            e.target.style.transform = 'scale(1.1)';
+            e.target.style.transition = 'width 0.2s ease-in-out, height 0.2s ease-in-out';
+        };
+    
+        const shrink = (e) => {
+            e.target.style.transform = 'scale(1)';
+            e.target.style.transition = 'width 0.2s ease-in-out, height 0.2s ease-in-out';
+        };
+    
+        const mediaScrollerStyle = {
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            overflowX: 'auto',
+            gap: '4rem',
+            padding: '2rem 0',
+          };
+          
+          const mediaItemStyle = {
+            minWidth: 'auto',
+            overflow: 'hidden',
+            borderRadius: '8px',
+            position: 'relative',
+            transition: 'width 0.2s ease-in-out, height 0.2s ease-in-out',
+          };
         
-            <div style={mediaScrollerStyle} className="media-scroller">
-                <div style={mediaScrollerItemStyle} className="media-scroller-item">
-                    <img style={mediaScrollerItemImgStyle} src="/resources/web.jpg" alt="Web" />
-                </div>
-                <div style={mediaScrollerItemStyle}class="media-scroller-item">
-                    <img style={mediaScrollerItemImgStyle} src="/resources/uxui.jpg" alt="UI/UX" />
-                </div>
-                <div style={mediaScrollerItemStyle}class="media-scroller-item">
-                    <img style={mediaScrollerItemImgStyle} src="/resources/database.jpg" alt="Database" />
-                </div>
-                <div style={mediaScrollerItemStyle}class="media-scroller-item">
-                    <img style={mediaScrollerItemImgStyle} src="/resources/language.jpg" alt="OOP" />
-                </div>
-                <div style={mediaScrollerItemStyle}class="media-scroller-item">
-                    <img style={mediaScrollerItemImgStyle} src="/resources/network.jpg" alt="Networking" />
-                </div>
-                <div style={mediaScrollerItemStyle}class="media-scroller-item">
-                    <img style={mediaScrollerItemImgStyle} src="/resources/mobile.jpg" alt="Mobile" />
-              </div>
-        </div>
-      </div>
-    );     
-};
+          const mediaScrollerItemImgStyle = {
+            width: '100%',
+            height: 'auto',
+            transition: 'width 0.2s ease-in-out',
+          };
+
+        return (
+            <div>        
+                <div style={mediaScrollerStyle} className="media-scroller">
+                    {mediaItems.map((item, index) => (
+                        <Link href={item.href} key={index}>
+                            <div style={index === 0 ? mediaItemStyle: mediaItemStyle}>
+                                <img 
+                                    style={mediaScrollerItemImgStyle} 
+                                    src={item.src} 
+                                    alt={item.alt} 
+                                    onMouseEnter={enlarge}
+                                    onMouseLeave={shrink}
+                                />
+                            </div>
+                        </Link>
+                    ))}
+                </div>      
+            </div>
+        );     
+    }
+    
+    
+    
+
