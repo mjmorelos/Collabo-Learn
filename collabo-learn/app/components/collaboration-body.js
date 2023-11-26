@@ -49,7 +49,10 @@
           };
 
         return (
-            <div>        
+            <div style={{marginTop: '5rem'}}>     
+                <div style={{ color: '#4D4D4D', fontSize: '23px', fontFamily: 'Anonymous Pro', lineHeight: '1.6', textAlign: 'center' }}>
+                <strong>AREAS OF INTEREST</strong>
+                </div>   
                 <div style={mediaScrollerStyle} className="media-scroller">
                     {mediaItems.map((item, index) => (
                         <Link href={item.href} key={index}>
