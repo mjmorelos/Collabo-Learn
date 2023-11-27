@@ -62,7 +62,7 @@ export default function Navbar() {
             </div>
           )}
           <button className="border border-teal-500 px-4 py-2 rounded-md hover:bg-teal-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300 transition duration-300 ease-in-out">
-            <Link href="#find-tutor" className="hover:underline">Find a tutor</Link>
+            <Link href="/FindTutor" className="hover:underline">Find a tutor</Link>
           </button>
   
           <button className="border border-teal-500 px-4 py-2 rounded-md hover:bg-teal-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300 transition duration-300 ease-in-out">
