@@ -3,15 +3,14 @@
     
     export default function Collaboration() {
         const mediaItems = [
-            {href: "/Collaborate/web", src: "/resources/web.jpg", alt: "Web"},
-            {href: "/Collaborate/uxi", src: "/resources/uxui.jpg", alt: "UI/UX"},
-            {href: "/Collaborate/mobile", src: "/resources/mobile.jpg", alt: "Mobile"},
-            {href: "/Collaborate/ai", src: "/resources/machine-learning.jpg", alt: "AI"},
-            {href: "/Collaborate/database", src: "/resources/database.jpg", alt: "Database"},
-            {href: "/Collaborate/language", src: "/resources/language.jpg", alt: "OOP"},
-            {href: "/Collaborate/network", src: "/resources/networking.jpg", alt: "Networking"},
-
-            {href: "/Collaborate/iot", src: "/resources/IoT.jpg", alt: "IoT"},
+            {href: "/Collaborate/Web", src: "/resources/web.jpg", alt: "Web"},
+            {href: "/Collaborate/UX", src: "/resources/uxui.jpg", alt: "UI/UX"},
+            {href: "/Collaborate/Mobile", src: "/resources/mobile.jpg", alt: "Mobile"},
+            {href: "/Collaborate/AI", src: "/resources/machine-learning.jpg", alt: "AI"},
+            {href: "/Collaborate/Database", src: "/resources/database.jpg", alt: "Database"},
+            {href: "/Collaborate/Language", src: "/resources/language.jpg", alt: "OOP"},
+            {href: "/Collaborate/Network", src: "/resources/networking.jpg", alt: "Networking"},
+            {href: "/Collaborate/IOT", src: "/resources/IoT.jpg", alt: "IoT"},
 
         ];
     
