@@ -11,7 +11,7 @@ const Banner = () => {
       <img
         src="/resources/student.jpg"
         alt="Collaborative workspace"
-        className="mr-20 w-auto"
+        className="mr-60 w-auto"
         style={{ width: '40%', height: '95%' }}
       /> 
       <h1 style={{fontFamily: 'anonymous pro', color: '#4D4D4D', fontSize: '2rem'}}>Collaborate and Learn.</h1>

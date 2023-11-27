@@ -42,9 +42,11 @@
           };
         
           const mediaScrollerItemImgStyle = {
-            width: '100%',
+            width: '80%',
             height: 'auto',
             transition: 'width 0.2s ease-in-out',
+            marginLeft: 'auto',
+            marginRight: 'auto',
           };
 
         return (

@@ -5,7 +5,7 @@ export default function About() {
   const mediaScrollerStyle = {
     display: 'grid',
     gridAutoFlow: 'column',
-    gridAutoColumns: '23%',
+    gridAutoColumns: '21%',
     gap: '2rem',
     overflowX: 'auto',
     overscrollBehaviorInline: 'contain',
@@ -15,13 +15,13 @@ export default function About() {
   const mediaScrollerItemStyle = {
     display: 'grid',
     gridTemplateRows: 'min-content',
-    padding: '3rem',
+    padding: '1.5rem',
     aspectRatio: '20/15',
     objectFit: 'cover',
   };
 
   const mediaScrollerItemImgStyle = {
-    inlineSize: '100%',
+    inlineSize: '70%',
     aspectRatio: '30/40',
     objectFit: 'cover',
   };
