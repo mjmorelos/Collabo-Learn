@@ -51,13 +51,13 @@ export default function Navbar() {
   
           {isCollaborateDropdownOpen && (
             <div className="absolute top-full left-0 bg-white border border-teal-500 p-3 rounded-md space-y-5">
-              <Link href="/Collaborate/web" className="hover:underline block">Web</Link>
-              <Link href="/Collaborate/uxi" className="hover:underline block">UI/UX</Link>
-              <Link href="/Collaborate/mobile" className="hover:underline block">Mobile</Link>
-              <Link href="/Collaborate/ai" className="hover:underline block">Machine Learning</Link>
-              <Link href="/Collaborate/database" className="hover:underline block">Database</Link>
-              <Link href="/Collaborate/language" className="hover:underline block">Language Specific</Link>
-              <Link href="/Collaborate/iot" className="hover:underline block">Internet of Things</Link>
+              <Link href="/Collaborate/Web" className="hover:underline block">Web</Link>
+              <Link href="/Collaborate/UX" className="hover:underline block">UI/UX</Link>
+              <Link href="/Collaborate/Mobile" className="hover:underline block">Mobile</Link>
+              <Link href="/Collaborate/AI" className="hover:underline block">Machine Learning</Link>
+              <Link href="/Collaborate/Database" className="hover:underline block">Database</Link>
+              <Link href="/Collaborate/Language" className="hover:underline block">Language Specific</Link>
+              <Link href="/Collaborate/IOT" className="hover:underline block">Internet of Things</Link>
 
             </div>
           )}
@@ -66,7 +66,7 @@ export default function Navbar() {
           </button>
   
           <button className="border border-teal-500 px-4 py-2 rounded-md hover:bg-teal-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300 transition duration-300 ease-in-out">
-            <Link href="#sample-projects" className="hover:underline">Sample Projects</Link>
+            <Link href="/ProjectSample" className="hover:underline">Sample Projects</Link>
           </button>
         </div>
       </nav>
