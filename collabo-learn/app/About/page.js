@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Navbar from '../components/navbar';
 
 export default function About() {
@@ -39,36 +40,36 @@ export default function About() {
           alignItems: 'center', 
           justifyContent: 'center' }}
       >
-        <div style={{ color: '#4D4D4D', fontSize: '23px', fontFamily: 'Anonymous Pro', lineHeight: '1.6', textAlign: 'center' }}>
-          <strong>About Us</strong><br/><br/>
+        <div style={{ color: '#4D4D4D', fontSize: '25px', fontFamily: 'Anonymous Pro', lineHeight: '2.6', textAlign: 'center' }}>
+          <strong>About Us</strong><br/>
           We are a team of third-semester software development students passionate about leveraging our skills and creativity to make a meaningful impact in Calgary's fast-growing tech industry.<br/>
           Our goal is not just to learn but to actively contribute, crafting solutions that address real-world challenges while embracing the dynamic spirit of Calgary's tech community.
         </div>
       </div>
 
-      <div style={{ marginTop: '1rem', color: '#4D4D4D', fontSize: '23px', fontFamily: 'Anonymous Pro', lineHeight: '3', textAlign: 'center' }}>
+      <div style={{ marginTop: '5rem', marginBottom: '5rem', color: '#4D4D4D', fontSize: '25px', fontFamily: 'Anonymous Pro', lineHeight: '2.6', textAlign: 'center' }}>
         <strong>Our Team</strong>
         <div style={mediaScrollerStyle} className="media-scroller">
           <div style={mediaScrollerItemStyle} className="media-scroller-item">
-            <img style={mediaScrollerItemImgStyle} src="/resources/Mark.jpg" alt="Mark" />
+            <Image style={mediaScrollerItemImgStyle} src="/resources/Mark.jpg" alt="Mark" width={"145"} height={"170"} />
           </div>
           <div style={mediaScrollerItemStyle}class="media-scroller-item">
-            <img style={mediaScrollerItemImgStyle} src="/resources/Sha.jpg" alt="Sha" />
+            <Image style={mediaScrollerItemImgStyle} src="/resources/Sha.jpg" alt="Sha" width={"145"} height={"170"}/>
           </div>
           <div style={mediaScrollerItemStyle}class="media-scroller-item">
-            <img style={mediaScrollerItemImgStyle} src="/resources/Lance.jpg" alt="Lance" />
+            <Image style={mediaScrollerItemImgStyle} src="/resources/Lance.jpg" alt="Lance" width={"145"} height={"170"}/>
           </div>
           <div style={mediaScrollerItemStyle}class="media-scroller-item">
-            <img style={mediaScrollerItemImgStyle} src="/resources/Dom.jpg" alt="Dom" />
+            <Image style={mediaScrollerItemImgStyle} src="/resources/Dom.jpg" alt="Dom" width={"145"} height={"170"}/>
           </div>
           <div style={mediaScrollerItemStyle}class="media-scroller-item">
-            <img style={mediaScrollerItemImgStyle} src="/resources/Ruth.jpg" alt="Ruth" />
+            <Image style={mediaScrollerItemImgStyle} src="/resources/Ruth.jpg" alt="Ruth" width={"145"} height={"170"}/>
           </div>
           <div style={mediaScrollerItemStyle}class="media-scroller-item">
-            <img style={mediaScrollerItemImgStyle} src="/resources/Vincent.jpg" alt="Vincent" />
+            <Image style={mediaScrollerItemImgStyle} src="/resources/Vincent.jpg" alt="Vincent" width={"145"} height={"170"}/>
           </div>
           <div style={mediaScrollerItemStyle}class="media-scroller-item">
-            <img style={mediaScrollerItemImgStyle} src="/resources/Abdul.jpg" alt="Abdul" />
+            <Image style={mediaScrollerItemImgStyle} src="/resources/Abdul.jpg" alt="Abdul" width={"145"} height={"170"}/>
           </div>
         </div>
       </div>

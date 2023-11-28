@@ -17,13 +17,16 @@ export default function Footer() {
           setShowFooter(false);
         }
       };
+
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+
     }, []);
   
     return (
-      <div style={{ minHeight: '20vh', display: 'flex', flexDirection: 'column' }}>
-        <main style={{ flex: '1 0 auto' }}>
-        {/* Your main content goes here */}
-        </main>
+      <div>
         <footer 
           style={{
             display: 'flex', 
