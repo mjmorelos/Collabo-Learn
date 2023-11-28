@@ -16,7 +16,6 @@ const sidebarStyle = {
   overflowX: "hidden",
   ocerflowY: "auto",
   paddingTop: "30px",
-  zIndex: "10",
 };
 
 const iconsStyle = {
