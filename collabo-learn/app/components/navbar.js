@@ -82,12 +82,12 @@ export default function Navbar() {
               Home
             </button>
           </Link>
-          <Link href="#find-tutor">
+          <Link href="FindTutor">
             <button className={`border border-teal-500 px-4 py-2 rounded-md hover:bg-teal-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300 transition duration-300 ease-in-out`}>
               Find a tutor
             </button>
           </Link>
-          <Link href="#sample-projects">
+          <Link href="ProjectSample">
             <button className={`border border-teal-500 px-4 py-2 rounded-md hover:bg-teal-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300 transition duration-300 ease-in-out`}>
               Sample Projects
             </button>
