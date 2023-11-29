@@ -7,7 +7,7 @@ const Database = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    const githubToken = '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';
+    const githubToken = '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';
 
     const databaseGithubProjects = async () => {
       try {
