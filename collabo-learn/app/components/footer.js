@@ -55,7 +55,7 @@ export default function Footer() {
             </a>
           </div>
           <div className="space-x-4">
-            <Link href="./About" className="hover:underline">
+            <Link href="/About" className="hover:underline">
               About Us</Link>
             <a href="#careers" className="hover:underline text-white">Careers</a>
             <a href="#careers" className="hover:underline text-white">Support</a>
