@@ -3,36 +3,30 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../../components/navbar';
 import Footer from '../../components/footer';
 
-const Database = () => {
+const GitHubDatabase = () => {
   const [projects, setProjects] = useState([]);
+  const databaseSearch = 'database'; // Specify the topic you want to search for
 
   useEffect(() => {
-    const githubToken = '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';
-
-    const databaseGithubProjects = async () => {
+    const fetchData = async () => {
       try {
-        const response = await fetch(
-          `https://api.github.com/search/repositories?q=topic:database`,
-          {
-            headers: {
-              Authorization: `Bearer ${githubToken}`,
-            },
-          }
-        );
+        const apiUrl = `https://api.github.com/search/repositories?q=topic:${databaseSearch}`;
 
-        if (!response.ok) {
-          throw new Error('Failed to fetch GitHub projects');
+        const response = await fetch(apiUrl);
+
+        if (response.ok) {
+          const data = await response.json();
+          setProjects(data.items); // Access the 'items' property in the response
+        } else {
+          console.error('Failed to fetch data from GitHub API');
         }
-
-        const data = await response.json();
-        setProjects(data.items);
       } catch (error) {
-        console.error('Error fetching GitHub projects:', error.message);
+        console.error('Error fetching data:', error);
       }
     };
 
-    databaseGithubProjects();
-  }, []);
+    fetchData();
+  }, [databaseSearch]);
 
   return (
     <div className="Database" style={{ backgroundColor: 'white' }}>
@@ -60,4 +54,4 @@ const Database = () => {
   );
 };
 
-export default Database;
+export default GitHubDatabase;
