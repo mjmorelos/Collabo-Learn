@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -58,16 +59,24 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 w-full flex justify-between items-center py-4 px-6 shadow-md bg-white text-black ${visible ? 'opacity-100' : 'opacity-0'}`}>
       <div>
-        <img src="https://i.postimg.cc/FRnsYr8k/collabo-logo.png" alt="Collabo-Learn Logo" />
+        <Image 
+          src="/resources/logo.png" 
+          alt="Logo"
+          width={120}
+          height={120}
+          style={{ cursor: 'pointer', marginLeft: "5rem" }}       
+        />
       </div>
       <div>
-      <img src="/resources/user.png" alt="User"
-            className={`${isUserDropdownOpen ? 'bg-teal-500 text-white' : ''
-            }`}
+        <Image 
+          src="/resources/user.png" 
+          alt="User"
+          width={40}
+          height={40}
+          className={`${isUserDropdownOpen ? 'bg-teal-500 text-white' : ''}`}
             onClick={handleUserClick}
             style={userIconStyle}
-          >
-          </img>
+          ></Image>
           {isUserDropdownOpen && (
             <div className="absolute top-16 right-0" style={dropdownStyle}>
               <Link href="/User/login" className="hover:underline block" style={{marginBottom: '8px'}}>Login</Link>
