@@ -5,7 +5,7 @@ import Footer from '../../components/footer';
 
 const GitHubDatabase = () => {
   const [projects, setProjects] = useState([]);
-  const databaseSearch = 'database'; // Specify the topic you want to search for
+  const databaseSearch = 'database';
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,7 +16,7 @@ const GitHubDatabase = () => {
 
         if (response.ok) {
           const data = await response.json();
-          setProjects(data.items); // Access the 'items' property in the response
+          setProjects(data.items); 
         } else {
           console.error('Failed to fetch data from GitHub API');
         }
