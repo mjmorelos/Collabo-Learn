@@ -1,7 +1,5 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
-import Footer from "./footer";
 import { Text } from "@chakra-ui/react"; 
 
 const sidebarStyle = {

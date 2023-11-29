@@ -1,6 +1,9 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
 export default function About() {
   const mediaScrollerStyle = {
@@ -72,6 +75,7 @@ export default function About() {
             <Image style={mediaScrollerItemImgStyle} src="/resources/Abdul.jpg" alt="Abdul" width={"145"} height={"170"}/>
           </div>
         </div>
+        <Footer />
       </div>
     </div>
   );
