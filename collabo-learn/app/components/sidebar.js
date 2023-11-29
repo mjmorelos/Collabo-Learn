@@ -9,12 +9,12 @@ const sidebarStyle = {
   marginTop: "105px",
   color: "#000",
   width: "200px",
-  height: "calc(85% - 100px)",
+  height: "calc(90% - 100px)",
   position: "fixed",
   top: "80px",
   left: "0",
   overflowX: "hidden",
-  ocerflowY: "auto",
+  overflowY: "auto",
   paddingTop: "30px",
 };
 

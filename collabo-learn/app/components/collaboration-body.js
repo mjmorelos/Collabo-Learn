@@ -1,5 +1,6 @@
     import React from "react";
     import Link from "next/link";
+    import Image from "next/image";
     
     export default function Collaboration() {
         const mediaItems = [
@@ -51,17 +52,19 @@
 
         return (
             <div style={{marginTop: '5rem'}}>     
-                <div style={{ color: '#4D4D4D', fontSize: '23px', fontFamily: 'Anonymous Pro', lineHeight: '1.6', textAlign: 'center' }}>
+                <div style={{ color: '#4D4D4D', fontSize: '23px', fontFamily: 'Anonymous Pro', lineHeight: '1.6', textAlign: 'center', marginBottom: '1rem', }}>
                 <strong>AREAS OF INTEREST</strong>
                 </div>   
                 <div style={mediaScrollerStyle} className="media-scroller">
                     {mediaItems.map((item, index) => (
                         <Link href={item.href} key={index}>
                             <div style={index === 0 ? mediaItemStyle: mediaItemStyle}>
-                                <img 
+                                <Image 
                                     style={mediaScrollerItemImgStyle} 
                                     src={item.src} 
-                                    alt={item.alt} 
+                                    alt={item.alt}
+                                    width={150}
+                                    height={150} 
                                     onMouseEnter={enlarge}
                                     onMouseLeave={shrink}
                                 />
