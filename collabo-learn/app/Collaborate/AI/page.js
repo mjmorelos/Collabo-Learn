@@ -10,7 +10,7 @@ import { Button } from '@chakra-ui/react';
 const AIworkspaceStyle = {
   flexDirection: 'column',
   backgroundColor: '#99C2CF',
-  minHeight: '100vh',
+  minHeight: '80vh',
   width: '100%',
 };
 

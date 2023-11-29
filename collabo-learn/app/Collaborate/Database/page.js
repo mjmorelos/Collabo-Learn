@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../../components/navbar';
 import Footer from '../../components/footer';
-import Sidebar from '@/app/components/sidebar';
 
 const Database = () => {
   const [projects, setProjects] = useState([]);
