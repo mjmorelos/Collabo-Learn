@@ -1,3 +1,5 @@
+"use client";
+
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
@@ -35,8 +37,11 @@ export default function Footer() {
             backgroundColor: '#022434', 
             padding: '20px 40px', 
             color: 'white',
-            position: showFooter ? 'fixed' : 'relative',
-            bottom: 0 }}>
+            position: showFooter ? 'fixed': 'relative',
+            bottom: 0,
+            left: 0,
+            right: 0,
+          }}>
 
           <div className="flex space-x-4 mb-4">
             {/* Placeholder for social icons */}
@@ -55,7 +60,7 @@ export default function Footer() {
             </a>
           </div>
           <div className="space-x-4">
-            <Link href="./About" className="hover:underline">
+            <Link href="/About" className="hover:underline">
               About Us</Link>
             <a href="#careers" className="hover:underline text-white">Careers</a>
             <a href="#careers" className="hover:underline text-white">Support</a>

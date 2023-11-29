@@ -75,8 +75,8 @@ export default function About() {
             <Image style={mediaScrollerItemImgStyle} src="/resources/Abdul.jpg" alt="Abdul" width={"145"} height={"170"}/>
           </div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }
