@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../../components/navbar';
 import Footer from '../../components/footer';
+import Sidebar from '../../components/sidebar';
 
 const GitHubDatabase = () => {
   const [projects, setProjects] = useState([]);
@@ -31,6 +32,7 @@ const GitHubDatabase = () => {
   return (
     <div className="Database" style={{ backgroundColor: 'white' }}>
       <Navbar />
+      <Sidebar />
       <div className="Database-projects" style={{ color: 'black', paddingLeft: '20px', paddingTop: '200px', fontFamily: 'Anonymous Pro, monospace', color: '#4D4D4D', fontSize: '2rem'}}>
         <h1 style={{ padding: '20px 0', textAlign: 'center'}}>Database Projects</h1>
         <div className="Database-list" style={{ display: 'flex', paddingTop: '10px', flexWrap: 'wrap', justifyContent: 'space-around', fontSize: '1rem' }}>
