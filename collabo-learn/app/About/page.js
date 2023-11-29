@@ -30,7 +30,7 @@ export default function About() {
   };
 
   return (
-    <div className="About" style={{ backgroundColor: 'white', minHeight: '150vh' }}>
+    <div className="About" style={{ backgroundColor: 'white', minHeight: '100vh' }}>
       <br /><br /><br /><br /><br />
       <Navbar />
       <div style={{ 
@@ -74,8 +74,8 @@ export default function About() {
             <img style={mediaScrollerItemImgStyle} src="/resources/Abdul.jpg" alt="Abdul" />
           </div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

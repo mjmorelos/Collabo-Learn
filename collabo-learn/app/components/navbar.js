@@ -5,27 +5,22 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Navbar() {
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(false);
   const [isCollaborateDropdownOpen, setCollaborateDropdownOpen] = useState(false);
   const [isUserDropdownOpen, setUserDropdownOpen] = useState(false);
-  
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true); 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-      const isScrolledDown = currentScrollPos > 100;
-
-      setVisible(!isScrolledDown || currentScrollPos === 0);
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 100);
       setPrevScrollPos(currentScrollPos);
     };
-
-    handleScroll();
 
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [prevScrollPos]);
   
   const handleCollaborateClick = () => {
     setCollaborateDropdownOpen(!isCollaborateDropdownOpen);
@@ -59,13 +54,15 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 w-full flex justify-between items-center py-4 px-6 shadow-md bg-white text-black ${visible ? 'opacity-100' : 'opacity-0'}`}>
       <div>
-        <Image 
-          src="/resources/logo.png" 
-          alt="Logo"
-          width={120}
-          height={120}
-          style={{ cursor: 'pointer', marginLeft: "5rem" }}       
-        />
+        <Link href="/">
+          <Image 
+            src="/resources/logo.png" 
+            alt="Logo"
+            width={120}
+            height={120}
+            style={{ cursor: 'pointer', marginLeft: "5rem" }}       
+          />
+        </Link>
       </div>
       <div>
         <Image 
@@ -91,12 +88,12 @@ export default function Navbar() {
               Home
             </button>
           </Link>
-          <Link href="#find-tutor">
+          <Link href="FindTutor">
             <button className={`border border-teal-500 px-4 py-2 rounded-md hover:bg-teal-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300 transition duration-300 ease-in-out`}>
               Find a tutor
             </button>
           </Link>
-          <Link href="#sample-projects">
+          <Link href="ProjectSample">
             <button className={`border border-teal-500 px-4 py-2 rounded-md hover:bg-teal-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300 transition duration-300 ease-in-out`}>
               Sample Projects
             </button>
@@ -112,7 +109,7 @@ export default function Navbar() {
             Collaborate
           </button> 
           {isCollaborateDropdownOpen && (
-            <div className="absolute top-full left-0 bg-white border border-teal-500 p-3 rounded-md space-y-5">
+            <div className="absolute top-full left-0 bg-white border border-teal-500 p-3 rounded-md space-y-5" style={{zIndex: '100',}}>
               <Link href="/Collaborate/Web"className="hover:underline block">Web</Link>
               <Link href="/Collaborate/UX" className="hover:underline block">UI/UX</Link>
               <Link href="/Collaborate/Mobile" className="hover:underline block">Mobile</Link>
