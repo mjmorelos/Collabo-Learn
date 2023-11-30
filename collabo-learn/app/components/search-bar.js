@@ -5,10 +5,8 @@ const SearchBar = ({ onSearch }) => {
 
   const handleSearch = async () => {
     try {
-      const apiKey = 'AIzaSyAUUOhiXiIEuyx6sJ40Jc12ihzeRnk1pIY';
-      const cx = 'c7ebe050305534f59';
       const response = await fetch(
-        `https://www.googleapis.com/customsearch/v1?q=${query}&key=${apiKey}&cx=${cx}`
+        `https://www.googleapis.com/customsearch/v1?q=${query}`
       );
 
       if (!response.ok) {
@@ -26,7 +24,7 @@ const SearchBar = ({ onSearch }) => {
     <div style={{ marginLeft: 'auto', marginRight: '20px', display: 'flex', alignItems: 'center' }}>
       <input
         type="text"
-        placeholder="Search..."
+        placeholder="Search Google"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         style={{ marginRight: '10px', padding: '8px', fontSize: 'small', color: 'black' }}
@@ -36,4 +34,4 @@ const SearchBar = ({ onSearch }) => {
   );
 };
 
-export default SearchBar
+export default SearchBar;
