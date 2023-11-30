@@ -6,8 +6,8 @@ import Footer from '@/app/components/footer';
 import CollabMenuBar from '@/app/components/collab-menu-bar';
 
 const GitHubCSharp = () => {
-  const [projects, setProjects] = useState([]);
-  const language = 'csharp'; // Specify the language here
+  const [csharpProjects, setCSharpProjects] = useState([]);
+  const language = 'csharp';
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,7 +18,7 @@ const GitHubCSharp = () => {
 
         if (response.ok) {
           const data = await response.json();
-          setProjects(data.items);
+          setCSharpProjects(data.items);
         } else {
           console.error('Failed to fetch data from GitHub API');
         }
@@ -31,26 +31,30 @@ const GitHubCSharp = () => {
   }, [language]);
 
   return (
-    <div className="Database" style={{ backgroundColor: 'white', minHeight: '100vh'}}>
+    <div className="GitHubCSharpPage" style={{ backgroundColor: 'white', minHeight: '100vh'}}>
       <Navbar />
       <CollabMenuBar />
-      <div className="Database-projects" style={{ color: 'black', paddingLeft: '20px', paddingTop: '200px', fontFamily: 'Anonymous Pro, monospace', color: '#4D4D4D', fontSize: '2rem' }}>
+      <div className="GitHubCSharp-projects" style={{ color: 'black', paddingLeft: '20px', paddingTop: '200px', fontFamily: 'Anonymous Pro, monospace', color: '#4D4D4D', fontSize: '2rem' }}>
       
         <h1 style={{ padding: '20px 0', textAlign: 'center' }}>C# Projects on GitHub</h1>
 
-        <div className="Database-list" style={{ display: 'flex', paddingTop: '10px', flexWrap: 'wrap', justifyContent: 'space-around', fontSize: '1rem' }}>
+        <div className="GitHubCSharp-list" style={{ display: 'flex', paddingTop: '10px', flexWrap: 'wrap', justifyContent: 'space-around', fontSize: '1rem' }}>
         
-          {projects.map((project) => (
+          {csharpProjects.map((project) => (
             <div key={project.id} style={{ flexBasis: 'calc(50% - 20px)', padding: '15px', border: '2px solid #14B8A6', borderRadius: '8px', marginBottom: '20px', boxSizing: 'border-box' }}>
               <a
                 href={project.html_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-teal-500 px-4 py-2 rounded-md transition duration-300 ease-in-out hover:bg-teal-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300"
+                className="GitHubCSharp-project-link border border-teal-500 px-4 py-2 rounded-md transition duration-300 ease-in-out hover:bg-teal-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300"
               >
                 <strong>{project.name}</strong>
               </a>
-              <p style={{ paddingTop: '10px' }}>{project.description}</p>
+              <p style={{ paddingTop: '10px' }}>
+                {project.description && project.description.length > 200
+                  ? project.description.slice(0, 200) + '...'
+                  : project.description}
+              </p>
             </div>
           ))}
         </div>
