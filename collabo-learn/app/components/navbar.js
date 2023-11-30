@@ -5,22 +5,27 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Navbar() {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(false);
   const [isCollaborateDropdownOpen, setCollaborateDropdownOpen] = useState(false);
   const [isUserDropdownOpen, setUserDropdownOpen] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true); 
+  
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 100);
+      const isScrolledDown = currentScrollPos > 100;
+
+      setVisible(!isScrolledDown || currentScrollPos === 0);
       setPrevScrollPos(currentScrollPos);
     };
+
+    handleScroll();
 
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [prevScrollPos]);
+  }, []);
   
   const handleCollaborateClick = () => {
     setCollaborateDropdownOpen(!isCollaborateDropdownOpen);
@@ -109,7 +114,7 @@ export default function Navbar() {
             Collaborate
           </button> 
           {isCollaborateDropdownOpen && (
-            <div className="absolute top-full left-0 bg-white border border-teal-500 p-3 rounded-md space-y-5" style={{zIndex: '100',}}>
+            <div className="absolute top-full left-0 bg-white border border-teal-500 p-3 rounded-md space-y-5">
               <Link href="/Collaborate/Web"className="hover:underline block">Web</Link>
               <Link href="/Collaborate/UX" className="hover:underline block">UI/UX</Link>
               <Link href="/Collaborate/Mobile" className="hover:underline block">Mobile</Link>
