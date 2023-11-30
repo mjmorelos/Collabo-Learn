@@ -59,13 +59,15 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 w-full flex justify-between items-center py-4 px-6 shadow-md bg-white text-black ${visible ? 'opacity-100' : 'opacity-0'}`}>
       <div>
-        <Image 
-          src="/resources/logo.png" 
-          alt="Logo"
-          width={120}
-          height={120}
-          style={{ cursor: 'pointer', marginLeft: "5rem" }}       
-        />
+        <Link href="/">
+          <Image 
+            src="/resources/logo.png" 
+            alt="Logo"
+            width={120}
+            height={120}
+            style={{ cursor: 'pointer', marginLeft: "5rem" }}       
+          />
+        </Link>
       </div>
       <div>
         <Image 

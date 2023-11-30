@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, {useState, useEffect} from "react";
 import Image from "next/image";
 import { Text } from "@chakra-ui/react"; 
 
@@ -6,10 +8,11 @@ const sidebarStyle = {
   backgroundColor: "#d9d9d9",
   marginTop: "105px",
   color: "#000",
-  width: "200px",
-  height: "calc(90% - 100px)",
+  width: "180px",
+  height: "80%",
   position: "fixed",
   top: "80px",
+  bottom: "10", 
   left: "0",
   overflowX: "hidden",
   overflowY: "auto",
@@ -21,7 +24,7 @@ const iconsStyle = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '30px',   
+    padding: '20px',   
 };
 
 const enlargeOnHover = (e) => {
@@ -38,7 +41,7 @@ export default function Sidebar(){
   return (
     <div className="sidenav" style={sidebarStyle}>
         <div className="icons" style={iconsStyle}>
-            <div style={{justifyContent: 'center', alignItems: 'center', padding: '5px'}}>
+            <div style={{justifyContent: 'center', padding: '2px',}}>
             <Image 
                 src={"/resources/dashboard.png"}
                 alt="Dashboard"
@@ -47,43 +50,43 @@ export default function Sidebar(){
                 onMouseEnter={enlargeOnHover}
                 onMouseLeave={resetSize}
                 />
-                <Text style={{justifyContent: 'center', padding: '15px'}}>Discussion Board</Text>
+                <Text style={{justifyContent: 'center', padding: '8px'}}>Discussion Board</Text>
                 <Image
                 src={"/resources/calendar.png"}
                 alt="Calendar"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 onMouseEnter={enlargeOnHover}
                 onMouseLeave={resetSize}
                 />
-                <Text style={{justifyContent: 'center', padding: '15px'}}>My Appointments</Text>
+                <Text style={{justifyContent: 'center', padding: '8px'}}>My Appointments</Text>
                 <Image
                 src={"/resources/edit.png"}
                 alt="Notes"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 onMouseEnter={enlargeOnHover}
                 onMouseLeave={resetSize}
                 />
-                <Text style={{justifyContent: 'center', padding: '15px'}}>Notes</Text>
+                <Text style={{justifyContent: 'center', padding: '8px'}}>Notes</Text>
                 <Image
                 src={"/resources/meeting.png"}
                 alt="Meetings"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 onMouseEnter={enlargeOnHover}
                 onMouseLeave={resetSize}
                 />
-                <Text style={{justifyContent: 'center', padding: '15px'}}>My Groups</Text>
+                <Text style={{justifyContent: 'center', padding: '8px'}}>My Groups</Text>
                 <Image
                 src={"/resources/hyperlink.png"}
                 alt="Learning"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 onMouseEnter={enlargeOnHover}
                 onMouseLeave={resetSize}
                 />
-                <Text style={{justifyContent: 'center', padding: '15px'}}>Learning links</Text>
+                <Text style={{justifyContent: 'center', padding: '8px'}}>Learning links</Text>
             </div>
         </div>
     </div>

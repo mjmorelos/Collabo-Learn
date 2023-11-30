@@ -1,19 +1,35 @@
 "use client";
+
 import React from 'react';
 import { useEffect } from 'react';
 import Navbar from '../../components/navbar';
+import Sidebar from '../../components/sidebar';
 import Footer from '../../components/footer';
 
-const Web = () => {
-  return (
-    <div className="Web" style={{ backgroundColor: 'white' }}>
-    <br /><br /><br /><br /><br />
-    <Navbar />
-    <p>This is the Web page</p>
-
-    <Footer />
-  </div>
-  );
+const WebWorkSpaceStyle = {
+  flexDirection: 'column',
+  backgroundColor: '#99C2CF',
+  minHeight: '100vh',
+  width: '100%',
 };
 
-export default Web;
+const screenStyle = {
+  display: 'flex',
+  flex: '1',
+  gap: '2rem',
+};
+
+export default function UXI() {
+  return (
+    <div className="Mobile" style={WebWorkSpaceStyle}>
+      <div style={screenStyle}>
+        <Navbar />
+        <div className="content" style={WebWorkSpaceStyle}>
+          <Sidebar />
+          {/* Rest of the content goes here */}
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+};
