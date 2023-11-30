@@ -12,6 +12,7 @@ const sidebarStyle = {
   height: "80%",
   position: "fixed",
   top: "80px",
+  bottom: "10", 
   left: "0",
   overflowX: "hidden",
   overflowY: "auto",
@@ -23,7 +24,7 @@ const iconsStyle = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '30px',   
+    padding: '20px',   
 };
 
 const enlargeOnHover = (e) => {
@@ -53,8 +54,8 @@ export default function Sidebar(){
                 <Image
                 src={"/resources/calendar.png"}
                 alt="Calendar"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 onMouseEnter={enlargeOnHover}
                 onMouseLeave={resetSize}
                 />
@@ -62,8 +63,8 @@ export default function Sidebar(){
                 <Image
                 src={"/resources/edit.png"}
                 alt="Notes"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 onMouseEnter={enlargeOnHover}
                 onMouseLeave={resetSize}
                 />
@@ -71,8 +72,8 @@ export default function Sidebar(){
                 <Image
                 src={"/resources/meeting.png"}
                 alt="Meetings"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 onMouseEnter={enlargeOnHover}
                 onMouseLeave={resetSize}
                 />
@@ -80,8 +81,8 @@ export default function Sidebar(){
                 <Image
                 src={"/resources/hyperlink.png"}
                 alt="Learning"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
                 onMouseEnter={enlargeOnHover}
                 onMouseLeave={resetSize}
                 />
