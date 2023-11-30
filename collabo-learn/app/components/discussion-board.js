@@ -58,8 +58,8 @@ export default function DiscussionBoard() {
             <Image
               src={"/resources/attach-file.png"}
               alt="Attach File"
-              width={40}
-              height={40}
+              width={30}
+              height={30}
               style={{ marginTop: '20px', cursor: 'pointer' }}
             />
             <Button
@@ -73,7 +73,7 @@ export default function DiscussionBoard() {
                 borderRadius: '5px',
                 padding: '10px',
                 marginTop: '10px',
-                marginLeft: '20px',
+                marginLeft: '10px',
               }}
             >
               Post

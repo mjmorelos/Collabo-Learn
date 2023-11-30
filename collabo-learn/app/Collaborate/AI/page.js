@@ -6,11 +6,11 @@ import Sidebar from '../../components/sidebar';
 import DiscussionBoard from '../../components/discussion-board';
 import Footer from '../../components/footer';
 
-const AIworkspaceStyle = {
+const MainWorkSpaceStyle = {
   display: 'flex',
   flexDirection: 'column',
   backgroundColor: '#99C2CF',
-  minHeight: '110vh',
+  minHeight: '80vh',
   width: '100%',
 };
 
@@ -30,13 +30,13 @@ const videoContainerStyle = {
 };
 
 const iframeStyle = {
-  width: '500px',
-  height: '400px',
+  width: '600px',
+  height: '600px',
 };
 
 export default function AI() {
   return (
-    <div className="workspace" style={AIworkspaceStyle}>
+    <div className="workspace" style={MainWorkSpaceStyle}>
       <Navbar />
       <div className="content" style={contentStyle}>
         <Sidebar />
