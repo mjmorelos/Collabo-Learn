@@ -81,8 +81,7 @@ export default function DiscussionBoard() {
           </div>
         </div>
       </div>
-
-      <div style={{ position: 'absolute', bottom: '20px', left: '50%', transform: 'translateX(-50%)' }}>
+      <div style={{ position: 'absolute', bottom: '25px', left: '50%', transform: 'translateX(-50%)' }}>
         <h2 style={{ color: '#4D4D4D', fontSize: '23px', fontFamily: 'Anonymous Pro', textAlign: 'center' }}>
           <strong>Sample Projects in:</strong>
         </h2>
