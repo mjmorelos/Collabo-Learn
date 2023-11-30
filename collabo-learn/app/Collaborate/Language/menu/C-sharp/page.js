@@ -31,7 +31,7 @@ const GitHubCSharp = () => {
   }, [language]);
 
   return (
-    <div className="Database" style={{ backgroundColor: 'white' }}>
+    <div className="Database" style={{ backgroundColor: 'white', minHeight: '100vh'}}>
       <Navbar />
       <CollabMenuBar />
       <div className="Database-projects" style={{ color: 'black', paddingLeft: '20px', paddingTop: '200px', fontFamily: 'Anonymous Pro, monospace', color: '#4D4D4D', fontSize: '2rem' }}>
