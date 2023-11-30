@@ -5,9 +5,9 @@ import Navbar from '@/app/components/navbar';
 import Footer from '@/app/components/footer';
 import CollabMenuBar from '@/app/components/collab-menu-bar';
 
-const GitHubJava = () => {
+const GitHubPython = () => {
   const [projects, setProjects] = useState([]);
-  const language = 'java'; // Specify the language here
+  const language = 'python'; // Specify the language here
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,7 +36,7 @@ const GitHubJava = () => {
       <CollabMenuBar />
       <div className="Database-projects" style={{ color: 'black', paddingLeft: '20px', paddingTop: '200px', fontFamily: 'Anonymous Pro, monospace', color: '#4D4D4D', fontSize: '2rem' }}>
       
-        <h1 style={{ padding: '20px 0', textAlign: 'center' }}>Java Projects on GitHub</h1>
+        <h1 style={{ padding: '20px 0', textAlign: 'center' }}>Python Projects on GitHub</h1>
 
         <div className="Database-list" style={{ display: 'flex', paddingTop: '10px', flexWrap: 'wrap', justifyContent: 'space-around', fontSize: '1rem' }}>
         
@@ -60,4 +60,4 @@ const GitHubJava = () => {
   );
 };
 
-export default GitHubJava;
+export default GitHubPython;

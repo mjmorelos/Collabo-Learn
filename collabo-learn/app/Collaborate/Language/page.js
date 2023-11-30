@@ -56,7 +56,7 @@ const CollaborationHomePage = () => {
         </div>
         <div style={{ ...boxStyle, backgroundColor: '#3399ff' }}>
           <h2 style={h2Style}>C#</h2>
-          <button style={buttonStyle}>Collaborate using C#</button>
+          <Link href="./Language/menu/C-sharp"><button style={buttonStyle}>Collaborate using C#</button></Link>
         </div>
       </div>
 
@@ -64,7 +64,7 @@ const CollaborationHomePage = () => {
       <div style={{ display: 'flex', flex: 1 }}>
         <div style={{ ...boxStyle, backgroundColor: '#66cc99' }}>
           <h2 style={h2Style}>Python</h2>
-          <button style={buttonStyle}>Collaborate using Python</button>
+          <Link href="./Language/menu/Python"><button style={buttonStyle}>Collaborate using Python</button></Link>
         </div>
         <div style={{ ...boxStyle, backgroundColor: '#9966cc' }}>
           <h2 style={h2Style}>Other</h2>

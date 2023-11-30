@@ -8,7 +8,7 @@ const sidebarStyle = {
   color: "#000",
   width: "200px",
   height: "calc(90% - 100px)",
-  position: "fixed",
+  position: 'absolute',
   top: "80px",
   left: "0",
   overflowX: "hidden",
@@ -21,7 +21,8 @@ const iconsStyle = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '30px',   
+    padding: '10px',  
+    marginLeft: '40px' 
 };
 
 const enlargeOnHover = (e) => {
