@@ -43,7 +43,7 @@ const CollaborationHomePage = () => {
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '150vh', paddingTop: '200px', backgroundColor: 'white', margin: '30px 0'}}>
+    <div style={{ display: 'flex', flexDirection: 'column', height: '150vh', paddingTop: '200px', backgroundColor: 'white', margin: '30px 0', minHeight: '100vh'}}>
       <Navbar /> 
       {/* Top Row */}
       <h1 style={h1Style}>Choose Your Language</h1>
@@ -68,7 +68,7 @@ const CollaborationHomePage = () => {
         </div>
         <div style={{ ...boxStyle, backgroundColor: '#9966cc' }}>
           <h2 style={h2Style}>Other</h2>
-          <button style={buttonStyle}>See More</button>
+          <Link href="./Language/menu/Other"><button style={buttonStyle}>See More</button></Link>
         </div>
       </div>
       <Footer />
