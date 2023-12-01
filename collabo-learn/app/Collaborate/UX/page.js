@@ -1,35 +1,60 @@
 "use client";
 
 import React from 'react';
-import { useEffect } from 'react';
 import Navbar from '../../components/navbar';
 import Sidebar from '../../components/sidebar';
+import DiscussionBoard from '../../components/discussion-board';
 import Footer from '../../components/footer';
 
-const UXIWorkSpaceStyle = {
+const MainWorkSpaceStyle = {
+  display: 'flex',
   flexDirection: 'column',
   backgroundColor: '#99C2CF',
-  minHeight: '100vh',
+  minHeight: '80vh',
   width: '100%',
 };
 
-const screenStyle = {
+const contentStyle = {
   display: 'flex',
-  flex: '1',
-  gap: '2rem',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
 };
 
-export default function UXI() {
+const videoContainerStyle = {
+  flex: '1',
+  display: 'flex',
+  justifyContent: 'flex-end',
+  alignItems: 'center',
+  marginTop: '30px',
+  marginRight: '16px', 
+};
+
+const iframeStyle = {
+  width: '600px',
+  height: '600px',
+};
+
+export default function UXUI() {
   return (
-    <div className="Mobile" style={UXIWorkSpaceStyle}>
-      <div style={screenStyle}>
-        <Navbar />
-        <div className="content" style={UXIWorkSpaceStyle}>
-          <Sidebar />
-          {/* Rest of the content goes here */}
+    <div className="workspace" style={MainWorkSpaceStyle}>
+      <Navbar />
+      <div className="content" style={contentStyle}>
+        <Sidebar />
+        <DiscussionBoard />
+          <div style={videoContainerStyle}>
+            <iframe 
+              width="100%" 
+              height="100%" 
+              src="https://www.youtube.com/embed/c9Wg6Cb_YlU?si=Xdsq7LE2kyGtGvSl" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen
+              style={iframeStyle}>
+            </iframe>
+          </div>
         </div>
-      </div>
       <Footer />
     </div>
   );
-};
+}
