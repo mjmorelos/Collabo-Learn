@@ -58,8 +58,8 @@ export default function DiscussionBoard() {
             <Image
               src={"/resources/attach-file.png"}
               alt="Attach File"
-              width={40}
-              height={40}
+              width={30}
+              height={30}
               style={{ marginTop: '20px', cursor: 'pointer' }}
             />
             <Button
@@ -73,7 +73,7 @@ export default function DiscussionBoard() {
                 borderRadius: '5px',
                 padding: '10px',
                 marginTop: '10px',
-                marginLeft: '20px',
+                marginLeft: '10px',
               }}
             >
               Post
@@ -81,8 +81,7 @@ export default function DiscussionBoard() {
           </div>
         </div>
       </div>
-
-      <div style={{ position: 'absolute', bottom: '20px', left: '50%', transform: 'translateX(-50%)' }}>
+      <div style={{ position: 'absolute', bottom: '25px', left: '50%', transform: 'translateX(-50%)' }}>
         <h2 style={{ color: '#4D4D4D', fontSize: '23px', fontFamily: 'Anonymous Pro', textAlign: 'center' }}>
           <strong>Sample Projects in:</strong>
         </h2>

@@ -6,40 +6,42 @@ import Sidebar from '../../components/sidebar';
 import DiscussionBoard from '../../components/discussion-board';
 import Footer from '../../components/footer';
 
-const AIworkspaceStyle = {
+const MainWorkSpaceStyle = {
   display: 'flex',
   flexDirection: 'column',
   backgroundColor: '#99C2CF',
-  minHeight: '100vh',
+  minHeight: '80vh',
   width: '100%',
 };
 
-const screenStyle = {
+const contentStyle = {
   display: 'flex',
-  flexDirection: 'column',
-  alignContent: 'center',
-  backgroundColor: '#99C2CF',
-  marginTop: '16rem',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+};
+
+const videoContainerStyle = {
   flex: '1',
+  display: 'flex',
+  justifyContent: 'flex-end',
+  alignItems: 'center',
+  marginTop: '30px',
+  marginRight: '16px', 
+};
+
+const iframeStyle = {
+  width: '600px',
+  height: '600px',
 };
 
 export default function AI() {
   return (
-    <div className="workspace" style={AIworkspaceStyle}>
+    <div className="workspace" style={MainWorkSpaceStyle}>
       <Navbar />
-      <div className="content" style={AIworkspaceStyle}>
+      <div className="content" style={contentStyle}>
         <Sidebar />
         <DiscussionBoard />
-        <div style={screenStyle}>
-          <div style={{
-            display: 'flex',
-            flex: '1',
-            position: 'absolute',
-            justifyContent: 'flex-right',
-            alignItems: 'center',
-            marginTop: '16rem',
-            marginLeft: '16rem',
-          }}>          
+          <div style={videoContainerStyle}>
             <iframe 
               width="100%" 
               height="100%" 
@@ -48,14 +50,10 @@ export default function AI() {
               frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
               allowfullscreen
-              style={{
-                width: '700px',
-                height: '500px',
-              }}>
+              style={iframeStyle}>
             </iframe>
           </div>
         </div>
-      </div>
       <Footer />
     </div>
   );
