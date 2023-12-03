@@ -20,14 +20,16 @@ export default function About() {
     display: 'grid',
     gridTemplateRows: 'min-content',
     padding: '1.5rem',
-    aspectRatio: '20/15',
+    aspectRatio: '20/20',
     objectFit: 'cover',
   };
 
   const mediaScrollerItemImgStyle = {
     inlineSize: '70%',
-    aspectRatio: '30/40',
+    aspectRatio: '30/30',
     objectFit: 'cover',
+    width: '100%',
+    height: '100%',
   };
 
   const enlarge = (e) => {
