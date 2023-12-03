@@ -9,6 +9,7 @@ const Signup = () => {
     name: '',
     email: '',
     username: '',
+    password: '',
     phone: '',
   });
 
@@ -36,6 +37,7 @@ const Signup = () => {
           name: '',
           email: '',
           username: '',
+          password: '',
           phone: '',
         });
       } else {
