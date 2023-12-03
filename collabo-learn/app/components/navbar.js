@@ -140,7 +140,7 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-            <Link href="/User/signup" className="hover:underline block" style={{ marginBottom: '8px' }}>Sign Up</Link>
+            <Link href="/signup" className="hover:underline block" style={{ marginBottom: '8px' }}>Sign Up</Link>
           </div>
         )}
       </div>
