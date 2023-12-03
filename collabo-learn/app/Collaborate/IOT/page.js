@@ -56,30 +56,32 @@ const IoTProjects = () => {
   }, [thingspeakEndpoint]);
 
   return (
-    <div className="iot-projects-container" style={{ backgroundColor: 'white', minHeight: '100vh' }}>
-      <Navbar />
-      <CollabMenuBar />
-      <div className="iot-projects-list" style={{ color: 'black', paddingLeft: '20px', paddingTop: '200px', fontFamily: 'Anonymous Pro, monospace', color: '#4D4D4D', fontSize: '2rem' }}>
-        <h1 style={{ padding: '20px 0', textAlign: 'center' }}>IoT Projects</h1>
-        <div className="iot-projects-grid" style={{ display: 'flex', paddingTop: '10px', flexWrap: 'wrap', justifyContent: 'space-around', fontSize: '1rem' }}>
-          {projects.map((project) => (
-            <div key={project.id} style={{ flexBasis: 'calc(50% - 20px)', padding: '15px', border: '2px solid #14B8A6', borderRadius: '8px', marginBottom: '20px', boxSizing: 'border-box' }}>
-              <a
-                href={project.html_url || project.channel_link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link border border-teal-500 px-4 py-2 rounded-md transition duration-300 ease-in-out hover:bg-teal-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300"
-              >
-                <strong>{project.name || project.channel_name}</strong>
-              </a>
-              <p style={{ paddingTop: '10px' }}>
-                {(project.description || project.description_field) &&
-                  (project.description || project.description_field).length > 200
-                  ? (project.description || project.description_field).slice(0, 200) + '...'
-                  : project.description || project.description_field}
-              </p>
-            </div>
-          ))}
+    <div className="mainContainer" style={{ backgroundColor: 'white' }}>
+      <div className="iot-projects-container" style={{ minHeight: '100vh' }}>
+        <Navbar />
+        <CollabMenuBar />
+        <div className="iot-projects-list" style={{ color: 'black', paddingLeft: '20px', paddingTop: '200px', fontFamily: 'Anonymous Pro, monospace', color: '#4D4D4D', fontSize: '2rem' }}>
+          <h1 style={{ padding: '20px 0', textAlign: 'center' }}>Internet of Things (IoT) Projects</h1>
+          <div className="iot-projects-grid" style={{ display: 'flex', paddingTop: '10px', flexWrap: 'wrap', justifyContent: 'space-around', fontSize: '1rem' }}>
+            {projects.map((project) => (
+              <div key={project.id} style={{ flexBasis: 'calc(50% - 20px)', padding: '15px', border: '2px solid #14B8A6', borderRadius: '8px', marginBottom: '20px', boxSizing: 'border-box' }}>
+                <a
+                  href={project.html_url || project.channel_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link border border-teal-500 px-4 py-2 rounded-md transition duration-300 ease-in-out hover:bg-teal-500 hover:text-white focus:outline-none focus:ring focus:border-blue-300"
+                >
+                  <strong>{project.name || project.channel_name}</strong>
+                </a>
+                <p style={{ paddingTop: '10px' }}>
+                  {(project.description || project.description_field) &&
+                    (project.description || project.description_field).length > 200
+                    ? (project.description || project.description_field).slice(0, 200) + '...'
+                    : project.description || project.description_field}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <Footer />
