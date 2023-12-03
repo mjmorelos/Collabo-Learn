@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useUserAuth } from "./auth-context";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
@@ -38,20 +39,25 @@ export default function Navbar() {
   useEffect(() => {
     const popupElement = document.querySelector(".popup");
     const closeBtnElement = document.querySelector(".popup .close-btn");
-  
+
     const handlePopupCloseClick = () => {
       popupElement.classList.remove("active");
     };
-  
+
     if (closeBtnElement && popupElement) {
       closeBtnElement.addEventListener("click", handlePopupCloseClick);
-  
+
       return () => {
         closeBtnElement.removeEventListener("click", handlePopupCloseClick);
       };
     }
   }, []);
-  
+
+  const handleSignIn = () => {
+    const { gitHubSignIn } = useUserAuth();
+    gitHubSignIn();
+  };
+
   const userIconStyle = {
     width: '40px',
     height: '40px',
@@ -113,7 +119,7 @@ export default function Navbar() {
             </button>
             <div className="popup">
               <div className="close-btn">&times;</div>
-              <div className="form-element">
+              <div className="form">
                 <h2>Log In</h2>
                 <div className="form-element">
                   <label htmlFor="email">Email</label>
@@ -131,7 +137,7 @@ export default function Navbar() {
                   <button>Sign in</button>
                 </div>
                 <div className="form-element">
-                  <a href="#">Forgot Password</a>
+                  <a href="#" onClick={handleSignIn}>Sign In with Github</a>
                 </div>
               </div>
             </div>
