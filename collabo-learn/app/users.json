@@ -1,0 +1,53 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "Mark",
+        "email": "mark@collabolearn.com",
+        "password": "morelos"
+      },
+      {
+        "id": 2,
+        "name": "Dom",
+        "email": "dom@collabolearn.com",
+        "password": "punzalan"
+      },
+      {
+        "id": 3,
+        "name": "Ruth",
+        "email": "ruth@collabolearn.com",
+        "password": "reyes"
+      },
+      {
+        "id": 4,
+        "name": "Abdul",
+        "email": "abdul@collabolearn.com",
+        "password": "alshami"
+      },
+      {
+        "id": 5,
+        "name": "Vince",
+        "email": "vince@collabolearn.com",
+        "password": "manio"
+      },
+      {
+        "id": 6,
+        "name": "Lance",
+        "email": "lance@collabolearn.com",
+        "password": "gonzales"
+      },
+      {
+        "id": 7,
+        "name": "Sha",
+        "email": "sha@collabolearn.com",
+        "password": "eugenio"
+      },
+      {
+        "id": 8,
+        "name": "Testing",
+        "email": "a",
+        "password": "a"
+      }
+    ]
+  }
+  
