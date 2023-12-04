@@ -125,7 +125,7 @@ const Signup = () => {
             <button onSubmit={handleSubmit} type="submit">Submit</button>
             
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <p>Already have an account? <Link href="/pages" style={{textDecoration: 'underline'}}>Login</Link></p>
+              <p>Already have an account? <Link href="/LogIn" style={{textDecoration: 'underline'}}>Login</Link></p>
             </div>
         </form>
 

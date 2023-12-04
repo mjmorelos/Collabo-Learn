@@ -3,12 +3,31 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { authenticateMockUser } from "./mock-auth";
 
 export default function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(false);
   const [isCollaborateDropdownOpen, setCollaborateDropdownOpen] = useState(false);
   const [isUserDropdownOpen, setUserDropdownOpen] = useState(false);
+  const [isPopupActive, setPopupActive] = useState(false);
+  const [authenticatedUser, setAuthenticatedUser] = useState(null);
+
+  const handleSignIn = () => {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const authenticatedUser = authenticateMockUser(email, password);
+
+    if (authenticatedUser) {
+      alert(`Welcome, ${authenticatedUser.name}!`);
+      setUserDropdownOpen(false);
+      setAuthenticatedUser(authenticatedUser);
+      setPopupActive(false);
+    } else {
+      alert("Incorrect email/password. Try Again.");
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,6 +60,7 @@ export default function Navbar() {
 
     const handlePopupCloseClick = () => {
       popupElement.classList.remove("active");
+      setPopupActive(false); 
     };
 
     if (closeBtnElement && popupElement) {
@@ -51,11 +71,6 @@ export default function Navbar() {
       };
     }
   }, []);
-
-  const handleSignIn = () => {
-    const { gitHubSignIn } = useUserAuth();
-    gitHubSignIn();
-  };
 
   const userIconStyle = {
     width: '40px',
@@ -100,49 +115,78 @@ export default function Navbar() {
           className={`${isUserDropdownOpen ? 'bg-teal-500 text-white' : ''}`}
           onClick={handleUserClick}
           style={userIconStyle}
-        ></Image>
-
-        {isUserDropdownOpen && (
-          <div className="absolute top-16 right-0" style={dropdownStyle}>
-            <button
-              onClick={() => {
-                const popupElement = document.querySelector(".popup");
-                if (popupElement) {
-                  popupElement.classList.add("active");
-                }
-              }}
-              className="hover:underline block"
-              style={{ marginBottom: '8px' }}
-            >
-              Log In
-            </button>
-            <div className="popup">
-              <div className="close-btn">&times;</div>
-              <div className="form">
-                <h2>Log In</h2>
-                <div className="form-element">
-                  <label htmlFor="email">Email</label>
-                  <input type="text" id="email" placeholder="enter email" />
-                </div>
-                <div className="form-element">
-                  <label htmlFor="password">Password</label>
-                  <input type="password" id="password" placeholder="enter password" />
-                </div>
-                <div className="form-element">
-                  <input type="checkbox" id="remember-me" />
-                  <label htmlFor="remember-me">Remember Me</label>
-                </div>
-                <div className="form-element">
-                  <button>Sign in</button>
-                </div>
-                <div className="form-element">
-                  <a href="#" onClick={handleSignIn}>Sign In with Github</a>
-                </div>
-              </div>
-            </div>
-            <Link href="/signup" className="hover:underline block" style={{ marginBottom: '8px' }}>Sign Up</Link>
+        /> 
+        {authenticatedUser && (
+          <div className="absolute top-14 right-11">
+            <p style={{ marginTop: '12px'}}>{`Hi, ${authenticatedUser.name}!`}</p>
           </div>
         )}
+        {isUserDropdownOpen && (
+          <div className="absolute top-16 right-0" style={dropdownStyle}>
+            {authenticatedUser ? (
+              <>
+                <Link href="/User/EditProfile" className="hover:underline block">
+                  Edit Profile
+                </Link>
+                <button
+                  onClick={() => {
+                    setUserDropdownOpen(false);
+                    setAuthenticatedUser(null); 
+                    setPopupActive(false); 
+                  }}
+                  className="hover:underline block"
+                  style={{ marginBottom: '8px' }}
+                >
+                  Sign Out
+                </button>
+              </>
+            ) : (
+              <>
+                <button
+                  onClick={() => {
+                    const popupElement = document.querySelector(".popup");
+                    if (popupElement) {
+                      popupElement.classList.add("active");
+                      setPopupActive(true);
+                    }
+                  }}
+                  className="hover:underline block"
+                  style={{ marginBottom: '8px' }}
+                >
+                  Log In
+                </button>
+                <div className={`popup ${isPopupActive ? 'active' : ''}`}>
+                  <div className="close-btn">&times;</div>
+                  <div className="form">
+                    <h2>Log In</h2>
+                    <div className="form-element">
+                      <label htmlFor="email">Email</label>
+                      <input type="text" id="email" placeholder="enter email" />
+                    </div>
+                    <div className="form-element">
+                      <label htmlFor="password">Password</label>
+                      <input type="password" id="password" placeholder="enter password" />
+                    </div>
+                    <div className="form-element">
+                      <input type="checkbox" id="remember-me" />
+                      <label htmlFor="remember-me">Remember Me</label>
+                    </div>
+                    <div className="form-element">
+                      <button onClick={handleSignIn}>Sign in</button>
+                    </div>
+                    <div className="form-element">
+                      <a href="#" onClick={handleSignIn}>Sign In with Github</a>
+                    </div>
+                  </div>
+                </div>
+                <Link href="/pages/SignUp" className="hover:underline block" style={{ marginBottom: '8px' }}>
+                  Sign Up
+                </Link>
+              </>
+            )}
+          </div>
+        )}
+        
       </div>
       <div className="space-x-4 flex items-center" style={{ marginTop: '80px', marginBottom: '30px' }}>
         <div className="flex space-x-8" style={{ marginRight: '20px' }}>
@@ -185,5 +229,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-  );
+  );  
 }
