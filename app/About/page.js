@@ -56,8 +56,8 @@ export default function About() {
       <div style={FirstHalfStyle}>        
         <div style={{ color: '#4D4D4D', fontSize: '30px', fontFamily: 'Anonymous Pro', lineHeight: '1.6', textAlign: 'center' }}>
           <strong>About Us</strong><br/><br/>
-          We are a team of third-semester software development students passionate about leveraging our skills and creativity to make a meaningful impact in Calgary's fast-growing tech industry.<br/>
-          Our goal is not just to learn but to actively contribute, crafting solutions that address real-world challenges while embracing the dynamic spirit of Calgary's tech community.
+          We are a team of third-semester software development students passionate about leveraging our skills and creativity to make a meaningful impact in Calgary&apos;s fast-growing tech industry.<br/>
+          Our goal is not just to learn but to actively contribute, crafting solutions that address real-world challenges while embracing the dynamic spirit of Calgary&apos;s tech community.
         </div>
       </div>
       <div style={SecondHalfStyle}>

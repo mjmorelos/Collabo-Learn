@@ -52,10 +52,10 @@ export default function Navbar() {
     }
   }, []);
 
-  const handleSignIn = () => {
-    const { gitHubSignIn } = useUserAuth();
-    gitHubSignIn();
-  };
+  // const handleSignIn = () => {
+  //   const { gitHubSignIn } = useUserAuth();
+  //   gitHubSignIn();
+  // };
 
   const userIconStyle = {
     width: '40px',
@@ -136,11 +136,11 @@ export default function Navbar() {
                   <button>Sign in</button>
                 </div>
                 <div className="form-element">
-                  <a href="#" onClick={handleSignIn}>Sign In with Github</a>
+                  <a href="/" >Sign In with Github</a>
                 </div>
               </div>
             </div>
-            <Link href="/User/signup" className="hover:underline block" style={{ marginBottom: '8px' }}>Sign Up</Link>
+            <Link href="/" className="hover:underline block" style={{ marginBottom: '8px' }}>Sign Up</Link>
           </div>
         )}
       </div>
