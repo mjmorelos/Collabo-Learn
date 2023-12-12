@@ -51,7 +51,7 @@ const enlargeOnHover = (e) => {
     const text = iconItem.querySelector('Text'); // Find the Text component
     e.target.style.transform = "scale(1.2)";
     e.target.style.transition = "width 0.2s ease-in-out, height 0.2s ease-in-out";
-    text.style.opacity = 1; // Show the text on hover
+    // text.style.opacity = 1; // Show the text on hover
 };
 
 const resetSize = (e) => {
@@ -59,7 +59,7 @@ const resetSize = (e) => {
     const text = iconItem.querySelector('Text'); // Find the Text component
     e.target.style.transform = "scale(1)";
     e.target.style.transition = "width 0.2s ease-in-out, height 0.2s ease-in-out";
-    text.style.opacity = 0; // Hide the text on mouse leave
+    // text.style.opacity = 0; // Hide the text on mouse leave
   
 };
 
